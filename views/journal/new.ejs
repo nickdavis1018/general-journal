@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <form action="/journal" method="post">
+          <fieldset>
+            <legend>New Journal Entry</legend>
+            <label
+              >Title:
+              <input type="text" name="title" placeholder="enter journal title" />
+            </label>
+            <label>
+              Date:
+              <input type="date" name="date" placeholder="enter submission date" />
+            </label>
+            <label>
+              Journal Entry:
+              <input type="text" name="content" placeholder="dear diary..."/>
+            </label>
+            <label>
+              Public?
+              <input type="checkbox" name="public" />
+            </label>
+            <input type="submit" value="Post to My Journal!" />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

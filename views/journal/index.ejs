@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+          <a href="/journal/new"><button>Post New Entry</button></a>
+          <a href="/user/logout"><button>Logout</button></a>
+        <% for (journal of journals) { %>
+        <article>
+            <a href="/journal/<%=journal._id %>"><h2>
+              <%= journal.title %> - <%= journal.public ? "Public" : "Private" %>
+            </h2></a>
+            <p> <%=journal.date %></p>
+            <p> <%=journal.content %></p>
+            <p> <%=journal.userKey %></p>
+        </article>
+        <% } %>
+      </div>
+    </main>
+  </body>
+</html>
