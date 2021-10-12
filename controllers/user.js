@@ -1,11 +1,22 @@
 const express = require("express");
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
-
 const router = express.Router();
 
 router.get("/signup", (req, res) => {
-    res.render("user/signup.ejs")
+  let loginVerify = "logout"
+  let loginText = "Logout"
+  let loginGreet = `Hello, ${req.session.username}`
+  let signUp = ""
+  let signUpText = ""
+  if(req.session.username === undefined){
+    loginVerify = "login"
+    loginText = "Login"
+    loginGreet = "Hello, stranger"
+    signUp = "/user/signup/"
+    signUpText = "Sign Up"
+  }
+    res.render("user/signup.ejs", {loginGreet, loginText, loginVerify, signUp, signUpText})
 })
 
 router.post("/signup", async (req, res) => {
@@ -21,7 +32,19 @@ router.get("/logout", (req, res) => {
     })
 })
 router.get("/login", (req, res) => {
-    res.render("user/login.ejs")
+  let loginVerify = "logout"
+  let loginText = "Logout"
+  let loginGreet = `Hello, ${req.session.username}`
+  let signUp = ""
+  let signUpText = ""
+  if(req.session.username === undefined){
+    loginVerify = "login"
+    loginText = "Login"
+    loginGreet = "Hello, stranger"
+    signUp = "/user/signup/"
+    signUpText = "Sign Up"
+  }
+    res.render("user/login.ejs", {loginGreet, loginText, loginVerify, signUp, signUpText})
 })
 
 router.post("/login", (req, res) => {
@@ -34,7 +57,8 @@ router.post("/login", (req, res) => {
         if (result) {
           req.session.username = username
           req.session.loggedIn = true
-          res.redirect("/journal");
+          console.log(req.session)
+          res.redirect("/");
         } else {
           res.send("Error. Bad password.");
         }

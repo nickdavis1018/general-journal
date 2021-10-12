@@ -1,3 +1,53 @@
 <header>
     <h1>General Journal</h1>
+    <div id="banner-links-header">
+        <div id="banner-links-left">
+    <a class="banner-link" href="/">Home</a>    
+    <a class="banner-link" href="/journal/">My Journal</a>
+    <a class="banner-link" href="/about/">About</a>
+</div>
+<div id="banner-links-right">
+    <h7><%=loginGreet%> | </h7>
+    <a class="banner-link-2" href="/user/<%=loginVerify%>/"><%=loginText%></a>
+    <%if(signUpText==="Sign Up"){%>
+    <a class="banner-link-2" href="<%=signUp%>">| <%=signUpText%></a>
+    <%}%>
+</div>
+</div>
 </header>
+<style>
+
+header{
+    padding-bottom: 5px;
+    background-color: #9b4dca;
+
+}
+
+.banner-link{
+    color: white;
+    padding: 0px 20px 0px 0px;
+}
+
+.banner-link-2{
+    color: white;
+    display: inline;
+}
+h1{
+    color: white;
+    font-size: 64px;
+    text-align: center;
+}
+
+h7{
+    font-weight: bold;
+    color: rgb(221, 220, 220);
+}
+
+#banner-links-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+    color: white;
+}
+</style>

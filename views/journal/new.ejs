@@ -4,6 +4,7 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
+      <h2 id="location-text">NEW COMPOSITION</h2>
       <div>
         <form action="/journal" method="post">
           <fieldset>
@@ -13,12 +14,8 @@
               <input type="text" name="title" placeholder="enter journal title" />
             </label>
             <label>
-              Date:
-              <input type="date" name="date" placeholder="enter submission date" />
-            </label>
-            <label>
               Journal Entry:
-              <input type="text" name="content" placeholder="dear diary..."/>
+              <input type="text" id="description" name="content" placeholder="dear diary..."/>
             </label>
             <label>
               Public?
@@ -30,4 +27,6 @@
       </div>
     </main>
   </body>
+  <style>
+  </style>
 </html>

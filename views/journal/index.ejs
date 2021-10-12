@@ -1,24 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include("../partials/head.ejs") %>
-
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <div>
+      <div id="index-banner">
+      <h2 id="location-text">MY JOURNAL</h2>
           <a href="/journal/new"><button>Post New Entry</button></a>
-          <a href="/user/logout"><button>Logout</button></a>
-        <% for (journal of journals) { %>
-        <article>
-            <a href="/journal/<%=journal._id %>"><h2>
-              <%= journal.title %> - <%= journal.public ? "Public" : "Private" %>
-            </h2></a>
-            <p> <%=journal.date %></p>
-            <p> <%=journal.content %></p>
-            <p> <%=journal.userKey %></p>
-        </article>
-        <% } %>
+          </div>
+        </div>
+        <div>
+          <div id="user-journal-div">
+            <div class="all-journals"><h6>My Journal Entries</h6>
+          <% for (journal of journals) { %>
+            <article>
+              <div class="entry2">
+                <a href="/journal/<%=journal._id %>"><h4>
+                <%= journal.title %></h4></a><p> <%=journal.date %></p></div>
+                <p><%= journal.public ? "public" : "private" %></p>
+                <p> <%=journal.content %></p>
+                <p> <%=journal.userKey %></p>
+            </article></br>
+            <% } %>
+          </div><br>
+          <div id="barrier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="public-journals"><h6>My Public Journal Entries</h6>
+            <% for (journal of journals) { %>
+             <% if(journal.public === true){%>
+              <article>
+                <div class="entry2">
+                  <a href="/journal/<%=journal._id %>"><h4>
+                  <%= journal.title %></h4></a><p> <%=journal.date %></p></div>
+                  <p><%= journal.public ? "public" : "private" %></p>
+                  <p> <%=journal.content %></p>
+                  <p> <%=journal.userKey %></p>
+              </article></br>
+              <% }} %>
+            </div>
+            </div>
       </div>
     </main>
   </body>
+  <style>
+
+    #user-journal-div{
+    display: flex;
+    flex-direction: row;
+    }
+
+    #barrier{
+      width: 50px;
+    }
+    #index-banner{
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .public-journals{
+      display: flex;   
+      flex-direction: column;
+      margin-right: 10px;
+    }
+
+    .all-journals{
+      display: flex;   
+      flex-direction: column;
+      margin-left: 10px;
+    }
+
+    article{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    }
+
+    .entry2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+  </style>
 </html>
