@@ -4,7 +4,11 @@
 <body>
   <%- include("./partials/header.ejs") %>
 <main>
-  <h2 id="location-text">HOME</h2>
+  <div id="index-banner">
+    <h2 id="location-text">HOME</h2><div id="banner-div-backup">
+        <a href="/journal/new"><button id="new-entry">New Post</button></a><a href="/journal/"><button id="new-entry">Go to Journal</button></a></div></div></div><br>
+  <div id="master-div">
+  <h6>Public Journal</h6>
       <div class="entry">
         <% for (journal of journals) { %>
         <% if(journal.userKey === currentUser){ %>
@@ -12,57 +16,17 @@
         <% }else{ %>
           <article class="other-article">
           <%}%>
-          <div class="entry-2">
+          <div class="entry-2"><div>
             <a href="/journal/<%=journal._id %>">
 <h4>
             <%= journal.title %></h4></a>
-            <p id="date"><%=journal.date %></p></div>
-            <p><%= journal.public ? "public" : "private" %></p>
-            <p> <%=journal.content %></p>
-            <p> <%=journal.userKey %></p>
-        </article>
-          <article id="barrier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</article>
+            <p id="content">"<%=journal.content %>"<br>- <%=journal.userKey %></p></div>
+            <p id="date"><%=journal.date.toLocaleDateString('en-US') %><br><%= journal.public ? "public" : "private" %></p>
+          </div>
+            </article>
         <% } %>
+      </div>
       </div>
     </main>
   </body>
-  <style>
-    .entry{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .entry-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    }
-
-    .other-article{
-      display: flex;
-      flex-direction: column;
-      border: solid black 1px;
-    }
-
-    .own-article{
-      display: flex;
-      flex-direction: column;
-      border: solid blue 2px;
-    }
-
-    #date{
-      font-size: 14px;
-    }
-
-    #banner-links{
-      text-align: right;
-      font-weight: bold;
-    }
-    #banner-master{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-
-  </style>
 </html>

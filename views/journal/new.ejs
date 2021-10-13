@@ -4,29 +4,55 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <h2 id="location-text">NEW COMPOSITION</h2>
-      <div>
+      <div id="index-banner">
+        <h2 id="location-text">COMPOSE</h2><div id="banner-div-backup">
+            <a href="/journal/new"><button id="new-entry">New Post</button></a><a href="/journal/"><button id="new-entry">Go to Journal</button></a></div></div></div><br>
+      <div id="container">
         <form action="/journal" method="post">
           <fieldset>
-            <legend>New Journal Entry</legend>
+            <legend id="comp">New Composition</legend>
             <label
-              >Title:
+              >Title
               <input type="text" name="title" placeholder="enter journal title" />
             </label>
             <label>
-              Journal Entry:
+              Journal Entry
               <input type="text" id="description" name="content" placeholder="dear diary..."/>
             </label>
+            <div id="post">
             <label>
               Public?
               <input type="checkbox" name="public" />
             </label>
-            <input type="submit" value="Post to My Journal!" />
+            <input type="submit" value="Post to My Journal!" /></div>
           </fieldset>
         </form>
       </div>
     </main>
   </body>
   <style>
+
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#comp{
+  text-align: center;
+}
+#post{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+fieldset{
+  text-align: center;
+  border: 1px solid black;
+  width: 600px;
+  background-color: rgba(240, 248, 255, 0.815);}
+
   </style>
 </html>

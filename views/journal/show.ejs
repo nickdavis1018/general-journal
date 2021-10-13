@@ -4,24 +4,40 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <h2 id="location-text">MY JOURNAL</h2>
-      <div>
-        <article x-data="{showTools: false}">
-            <h2><%= journal.title %></h2>
-            <p> <%=journal.date %></p>
-            <p> <%=journal.content %></p>
-            <p> <%= journal.public ? "Public" : "Private" %></p>
-            <p> <%=journal.userKey %></p>
-            <button x-on:click="showTools = !showTools">Show Options</button>
-            <div x-show="showTools" x-transition>
-              <a href="/journal/<%= journal._id %>/edit"><button>Edit</button></a>
-              <form action="/journal/<%= journal._id %>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete" />
-              </form>
-              <a href="/journal/"><button>Back to Main</button></a>
-            </div>
-          </article>
-      </div>
+      <div id="index-banner">
+        <h2 id="location-text">EDIT</h2><div id="banner-div-backup">
+        <a href="/journal/new"><button id="new-entry">New Post</button></a><a href="/journal/"><button id="new-entry">Go to Journal</button></a></div></div></div><br>
+        <div id="container">
+      <div id="show-journal">
+        <div id="entry2">
+        <h4><%= journal.title %></h4>
+            <div id="date-status"><p><%=journal.date.toLocaleDateString('en-US')  %><br><%= journal.public ? "Public" : "Private" %></p></div></div>
+            <p id="content">"<%=journal.content%>"<br>- <%=journal.userKey %></p></div></div>
+            <div id="backup-div">
+            <article x-data="{showTools: false}">
+              <div id="edit-buttons"></div><button x-on:click="showTools = !showTools">Show Options</button>
+                <div x-show="showTools" x-transition>
+                  <div id="button-row"><a href="/journal/<%= journal._id %>/edit"><button>Edit</button></a>&nbsp;&nbsp;&nbsp;
+                  <form action="/journal/<%= journal._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" />
+                  </form>
+                </div>
+            </article>
+          </div>
+          </div>
     </main>
   </body>
+  <style>
+#container{
+    display: flex;
+    justify-content: center;
+  }
+#backup-div{
+  display: flex;
+  justify-content: center;
+}
+#content{
+  padding-left: 10px;
+}
+  </style>
 </html>

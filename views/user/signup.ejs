@@ -4,16 +4,47 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
-        <div>
+        <div id="index-banner">
+            <h2 id="location-text">SIGN UP</h2><div id="banner-div-backup">
+            <a href="/journal/new"><button id="new-entry">New Post</button></a><a href="/journal/"><button id="new-entry">Go to Journal</button></a></div></div></div><br>
+        <div id="container">
             <form action="/user/signup" method="post">
             <fieldset>
-                <legend>New User</legend>
-                <label>Username: <input type="text" name="username" required></label>
-                <label>Password: <input type="password" name="password" required> </label>
+                <legend>New User Signup</legend>
+                <label>Username<input type="text" name="username" required></label>
+                <label>Password<input type="password" name="password" required> </label>
                 <input type="submit" value="Create Account">
             </fieldset>
             </form>
         </div>
+        <p id="center-sign">Already have an account? <br><a href="/user/login/">Login!</a></p>
     </main>
 </body>
+<style>
+    #comp{
+  text-align: center;
+}
+#center-sign{
+  text-align: center;
+}
+#post{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+fieldset{
+text-align: center;
+  border: 1px solid black;
+  width: 600px;
+  background-color: rgba(240, 248, 255, 0.815);}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+</style>
 </html>

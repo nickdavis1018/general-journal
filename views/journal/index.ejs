@@ -5,80 +5,48 @@
     <%- include("../partials/header.ejs") %>
     <main>
       <div id="index-banner">
-      <h2 id="location-text">MY JOURNAL</h2>
-          <a href="/journal/new"><button>Post New Entry</button></a>
-          </div>
+        <h2 id="location-text">MY JOURNAL</h2><div id="banner-div-backup">
+            <a href="/journal/new"><button id="new-entry">New Post</button></a><a href="/journal/"><button id="new-entry">Go to Journal</button></a></div></div></div><br>
         </div>
-        <div>
-          <div id="user-journal-div">
-            <div class="all-journals"><h6>My Journal Entries</h6>
+        <div id="master">
+          <h6>My Journal Entries</h6>
+            <div class="all-journals">
           <% for (journal of journals) { %>
             <article>
               <div class="entry2">
+                <div id="entry3">
                 <a href="/journal/<%=journal._id %>"><h4>
-                <%= journal.title %></h4></a><p> <%=journal.date %></p></div>
-                <p><%= journal.public ? "public" : "private" %></p>
-                <p> <%=journal.content %></p>
-                <p> <%=journal.userKey %></p>
-            </article></br>
+                  <%= journal.title %></h4></a>                
+                  <p id="content">"<%=journal.content %>"<br>- <%=journal.userKey %></p></div>
+                <p id="date"> <%=journal.date.toLocaleDateString('en-US')  %><br><%= journal.public ? "public" : "private" %></p></div>
+                </article>
             <% } %>
-          </div><br>
-          <div id="barrier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <div class="public-journals"><h6>My Public Journal Entries</h6>
+          </div>
+          <div id="line">&nbsp;</div><br>
+            <h6>My Public Journal Entries</h6>
+            <div class="public-journals">
             <% for (journal of journals) { %>
              <% if(journal.public === true){%>
               <article>
                 <div class="entry2">
+                  <div class="entry3">
                   <a href="/journal/<%=journal._id %>"><h4>
-                  <%= journal.title %></h4></a><p> <%=journal.date %></p></div>
-                  <p><%= journal.public ? "public" : "private" %></p>
-                  <p> <%=journal.content %></p>
-                  <p> <%=journal.userKey %></p>
-              </article></br>
+                  <%= journal.title%></h4></a>
+                  <p id="content">"<%=journal.content %>"<br>- <%=journal.userKey %></p></div>
+                  <p id="date"> <%=journal.date.toLocaleDateString('en-US')  %><br><%= journal.public ? "public" : "private" %></p></div>
+                  </article>
               <% }} %>
             </div>
-            </div>
-      </div>
+      </div></div>
     </main>
   </body>
   <style>
-
-    #user-journal-div{
-    display: flex;
-    flex-direction: row;
-    }
-
-    #barrier{
-      width: 50px;
-    }
-    #index-banner{
-      display: flex;
-      flex-direction: row;
-    }
-  
-    .public-journals{
-      display: flex;   
-      flex-direction: column;
-      margin-right: 10px;
-    }
-
-    .all-journals{
-      display: flex;   
-      flex-direction: column;
-      margin-left: 10px;
-    }
-
-    article{
-    display: flex;
-    flex-direction: column;
-    border: solid black 1px;
-    }
-
-    .entry2{
+      #entry2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    }
+    padding-left: 10px;
+  }
 
   </style>
 </html>

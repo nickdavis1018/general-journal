@@ -1,0 +1,291 @@
+.entry{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;  
+  }
+
+#new-entry{
+    width: 150px;
+    margin-right: 10px;
+}
+
+#index-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 16px;
+    background-color: rgba(240, 248, 255, 0.815);
+    border-bottom: solid black 2px;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+
+  h4{
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  h6{
+      text-align: center;
+  }
+
+  #location-text{
+      padding-left: 10px;
+  }
+
+  #flex{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #show-journal{
+    display: flex;   
+    flex-direction: column;
+    margin-right: 10px;
+    border: 1px solid black;
+    min-width: fit-content;
+    width: 600px;
+    background-color: rgba(240, 248, 255, 0.815);
+  }
+
+#button-row{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+  #entry2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  #date-status{
+    font-size: 14px;
+  }
+  
+#line{
+  border-bottom: black solid 2px;
+}
+
+    article{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.815);
+    }
+
+    #content{
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    .entry2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    #date{
+      font-size: 14px;
+    }
+
+  .public-journals{
+   display: grid;
+   grid-template-columns: repeat(3, 0fr);
+   padding-left: 10px;
+   justify-content: center;
+  }
+  .all-journals{
+   display: grid;
+   grid-template-columns: repeat(3, 0fr);
+   padding-left: 10px;
+   justify-content: center;
+  }
+
+  #content{
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  .other-article{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    padding: 10px;
+  }
+
+  h6{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+
+  .own-article{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    padding: 10px;
+    background-color: rgba(139, 255, 255, 0.815);
+  }
+
+  #banner-master{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .entry-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+@media only screen and (min-width: 1550px) {
+    .public-journals{
+        display: grid;
+        grid-template-columns: repeat(4, 0fr);
+        padding-left: 10px;
+        justify-content: center;
+       }
+       .all-journals{
+        display: grid;
+        grid-template-columns: repeat(4, 0fr);
+        padding-left: 10px;
+        justify-content: center;
+       }
+       .entry{
+        display: grid;
+        grid-template-columns: repeat(4, 0fr);
+        padding-left: 10px;
+      }
+}
+
+  @media only screen and (max-width: 1220px) {
+    h6{
+        font-size: 24px;
+        text-align: center;
+      }
+    .public-journals{
+            display: grid;
+            grid-template-columns: repeat(2, 0fr);
+            padding-left: 10px;
+            justify-content: center;
+           }
+           .all-journals{
+            display: grid;
+            grid-template-columns: repeat(2, 0fr);
+            padding-left: 10px;
+            justify-content: center;
+           }
+           .entry{
+            display: grid;
+            grid-template-columns: repeat(2, 0fr);
+            padding-left: 10px;
+            justify-content: center;     }
+        }
+
+    @media only screen and (max-width: 800px) {
+        h6{
+            font-size: 24px;
+            text-align: center;
+          }
+          h6{
+            text-align: center;
+          }
+        .public-journals{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+               }
+               .all-journals{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+               }
+               .entry{
+                display: grid;
+                grid-template-columns: repeat(1, 0fr);
+                align-items: center;
+              }
+              #show-journal{
+                  max-width: 500px;
+            }
+
+    @media only screen and (max-width: 475px) {
+                h1{
+                    font-size: 18px;
+                    text-align: center;
+                  }
+                  h2{
+                    font-size: 16px;
+
+                  }
+                  #show-journal{
+                    max-width: 200px;
+              }
+                  h4{
+                    font-size: 16px;
+  
+                  }
+                  h6{
+                    font-size: 16px;
+                    text-align: center;
+                  }
+                  p{
+                      font-size: 16px;
+                  }
+                       .entry{
+                        max-width: 300px;
+                      }
+                      #new-entry{
+                        font-size: 10px;
+                    }
+                    #location-text{
+                        padding: 0px;
+                    }
+                    #index-banner{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 16px;
+                        background-color: rgba(240, 248, 255, 0.815);
+                        border-bottom: solid black 2px;
+                      }
+                      .public-journals{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                       }
+                       .all-journals{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                       }
+                       .entry{
+                        display: grid;
+                        grid-template-columns: repeat(1, 0fr);
+                        align-items: center;
+                       }
+                       .other-article{
+                        display: flex;
+                        flex-direction: column;
+                        border: solid black 1px;
+                        padding: 10px;
+                        max-width: 250px;
+                      }
+                      .own-article{
+                        display: flex;
+                        flex-direction: column;
+                        border: solid black 1px;
+                        padding: 10px;
+                        background-color: rgba(240, 248, 255, 0.815);
+                        max-width: 250px;
+                      }
+                    }
+    }

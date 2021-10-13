@@ -1,6 +1,5 @@
 const express = require("express")
 const Journal = require("../models/journal")
-
 const router = express.Router()
 
 router.use((req, res, next) => {
@@ -82,6 +81,7 @@ router.put("/:id", (req, res) =>{
     req.body.public = req.body.public === "on" ? true : false
     Journal.findByIdAndUpdate(id, req.body, {new: true}, (err, journal) => {
         res.redirect("/journal")
+        
     })
 })
 
