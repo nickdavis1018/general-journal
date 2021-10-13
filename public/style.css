@@ -18,6 +18,30 @@
     border-bottom: solid black 2px;
   }
 
+  #comp{
+    text-align: center;
+  }
+  #center-sign{
+    text-align: center;
+  }
+  #post{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  fieldset{
+  text-align: center;
+    border: 1px solid black;
+    width: 600px;
+    background-color: rgba(240, 248, 255, 0.815);}
+  
+  #container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
   h2{
     font-size: 24px;
   }
@@ -226,6 +250,11 @@ justify-content: center;
                     font-size: 16px;
 
                   }
+                  #container{
+                    width: 100px;
+                    margin-left: 50px;
+                    }
+                
                   #show-journal{
                     max-width: 200px;
               }
@@ -249,6 +278,21 @@ justify-content: center;
                     #location-text{
                         padding: 0px;
                     }
+
+                    fieldset{
+                        text-align: center;
+                          border: 1px solid black;
+                          width: 300px;
+                          background-color: rgba(240, 248, 255, 0.815);
+                        justify-content: center;}
+                        
+                        #container{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            padding-left: 120px;
+
+                        }
                     #index-banner{
                         display: flex;
                         flex-direction: column;
@@ -261,16 +305,19 @@ justify-content: center;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        max-width: 200px;
                        }
                        .all-journals{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        max-width: 100px;
                        }
                        .entry{
                         display: grid;
                         grid-template-columns: repeat(1, 0fr);
                         align-items: center;
+                        max-width: 100px;
                        }
                        .other-article{
                         display: flex;
