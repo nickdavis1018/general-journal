@@ -1,5 +1,3 @@
-General Journal
----
 <h3>Welcome! You've arrived at the General Journal ReadMe!</h3>
 <h2>About</h2>
 <p>The goal of this tool is to allow users to create an account, login, and browse public journal entries/manage their own personal journal entries. Users should be able to freely create, edit, view, and delete their own Journal Entries, as well as being able to publicize messages to the entire site when desired.
@@ -26,17 +24,20 @@ General Journal
 </ul>
 <h2>Getting Started</h2>
 <p>To create an account with General Journal, go to "Sign Up" link in the top right corner of the screen:</p>
-<img src="./pictures/login-instruct.png" class="pics">
+<div class="picture-flex"><img src="http://imgur.com/HyMDL9I.png" class="pics"></div>
 <p>Users will then be re-directed to their personal "My Journal" view, and can freely click around through the Public Jorunal as desired:</p>
-<p>Personal Journal Landing Page</p>
-<img src="./pictures/personal-view.png" class="pics">
-<p>Personal Journal Landing Page</p>
-<img src="./pictures/login-view.png" class="pics">
+<p><strong>Personal Journal Landing Page</strong></p>
+<div class="picture-flex"><img src="https://i.imgur.com/wPIxd7E.png" class="pics"></div>
+<p><strong>Public Journal Landing Page</strong></p>
+<div class="picture-flex"><img src="http://imgur.com/mLx8s9R.png" class="pics"></div>
 <br>
-<p>From their "My Journal link, the user can browse their list of Journal Entries, click on their Titles to edit/delete them, and can create a New Post from the My Journal site as well.</p>
-<p>From the "Home" link, users can view the Public Journal, and any updates or contributions made by the end-user will display to the user in a teal-coolred format.</p>
+<p>From their <strong>"My Journal link"</strong>, the user can browse their list of Journal Entries, click on their Titles to edit/delete them, and can create a New Post from the My Journal site as well.</p>
+<p>From the <strong>"Home"</strong> link, users can view the Public Journal, and any updates or contributions made by the end-user will display to the user in a teal-coolred format.</p>
 <h2>Reference</h2>
-<a href="https://github.com/nickdavis1018/general-journal">General Journal GitHub<a><br>
-<a href="https://trello.com/b/NOQi8o0L/general-journal-development">General Journal Trello Board<a><br>
+<a href="https://general-journal.herokuapp.com/">Live Site Link</a><br>
+<a href="https://github.com/nickdavis1018/general-journal">General Journal GitHub</a><br>
+<a href="https://trello.com/b/NOQi8o0L/general-journal-development">General Journal Trello Board</a><br><br>
 <h2>Provide Feedback</h2>
-<p>Have feedback you would like to share? Want to see a feature added? Want to contribute? <a href = "mailto: nickdavis1018@gmail.com">Send me an email!</a><br></p>
+<p>Have feedback you would like to share? Want to see a feature added? Want to contribute?</p>
+
+<a href = "mailto: nickdavis1018@gmail.com">Send me an email!</a><br></div>
